@@ -1,0 +1,57 @@
+<!doctype html>
+<html lang="ar" dir="rtl">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover">
+  <meta name="theme-color" content="#123d32">
+  <meta name="description" content="نور الأذكار — أذكار وأدعية من القرآن الكريم والسنة الصحيحة، وسبحة إلكترونية تحفظ تقدمك.">
+  <title>نور الأذكار | سكينةٌ تلازم يومك</title>
+  <link rel="manifest" href="manifest.webmanifest">
+  <link rel="icon" href="icon.svg" type="image/svg+xml">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Amiri:wght@400;700&family=IBM+Plex+Sans+Arabic:wght@400;500;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <a class="skip-link" href="#content">انتقل إلى المحتوى</a>
+  <header class="topbar">
+    <a class="brand" href="#home" aria-label="نور الأذكار - الرئيسية"><span class="brand-mark">ن</span><span>نور <b>الأذكار</b><small>سَكينةٌ تلازم يومك</small></span></a>
+    <label class="searchbox"><span aria-hidden="true">⌕</span><input id="search" type="search" placeholder="ابحث عن ذكر أو دعاء..." aria-label="ابحث عن ذكر أو دعاء"><kbd>/</kbd></label>
+    <div class="top-actions"><button class="icon-btn" id="fontDown" title="تصغير الخط" aria-label="تصغير الخط">أ−</button><button class="icon-btn" id="fontUp" title="تكبير الخط" aria-label="تكبير الخط">أ＋</button><button class="icon-btn" id="themeToggle" title="الوضع الليلي" aria-label="تبديل الوضع الليلي">☾</button><button class="install-btn" id="installBtn" hidden>تثبيت التطبيق</button></div>
+  </header>
+  <div class="layout">
+    <aside class="sidebar" aria-label="التنقل الرئيسي">
+      <p class="side-label">مساحتك الإيمانية</p>
+      <a class="nav-link active" href="#home" data-view="home"><span>⌂</span>الرئيسية</a>
+      <a class="nav-link" href="#morning" data-view="morning"><span>☀</span>أذكار الصباح</a>
+      <a class="nav-link" href="#evening" data-view="evening"><span>☾</span>أذكار المساء</a>
+      <a class="nav-link" href="#categories" data-view="categories"><span>▦</span>مكتبة الأذكار</a>
+      <a class="nav-link" href="#favorites" data-view="favorites"><span>♡</span>المفضلة <i id="favCount">0</i></a>
+      <a class="nav-link" href="#recent" data-view="recent"><span>◷</span>قرأتُ مؤخرًا</a>
+      <a class="nav-link" href="#tasbeeh" data-view="tasbeeh"><span>◉</span>السبحة الإلكترونية</a>
+      <div class="sidebar-bottom"><div class="side-note"><span>✦</span><p>«ألا بذكر الله تطمئن القلوب»<small>سورة الرعد · ٢٨</small></p></div><div class="offline-status"><span class="status-dot"></span><span id="onlineText">جاهز للاستخدام</span></div></div>
+    </aside>
+    <main id="content">
+      <section id="homeView" class="view">
+        <div class="hero"><div class="hero-pattern"></div><div class="hero-copy"><span class="eyebrow">وَاذْكُر رَبَّكَ كَثِيرًا</span><h1>ابدأ يومك<br>بذكرٍ يطمئن قلبك</h1><p>رفيقك اليومي للأذكار والأدعية من القرآن الكريم والسنة النبوية الصحيحة.</p><a class="primary-btn" href="#morning">ابدأ أذكار الصباح <span>←</span></a></div><div class="hero-art" aria-hidden="true"><div class="arch"><span>۞</span><b>نورٌ على نور</b><small>اذكر الله يذكرك</small></div></div><div class="hero-date"><span id="todayDate"></span><b id="hijriDate"></b></div></div>
+        <div class="welcome-row"><div><span class="eyebrow muted">مساحةٌ للسكينة</span><h2>ماذا تحب أن تقرأ اليوم؟</h2></div><div class="daily-verse"><span>آية اليوم</span><p>﴿ فَاذْكُرُونِي أَذْكُرْكُمْ وَاشْكُرُوا لِي وَلَا تَكْفُرُونِ ﴾</p><small>سورة البقرة · ١٥٢</small></div></div>
+        <div class="quick-grid" id="quickGrid"></div>
+        <div class="section-heading"><div><span class="eyebrow muted">على خُطى الذكر</span><h2>مساحتك اليومية</h2></div><a href="#categories" class="text-link">كل الأقسام ←</a></div>
+        <div class="feature-grid"><button class="feature-card" data-go="morning"><span class="feature-icon sun">☀</span><span><b>ورد الصباح</b><small>ابدأ نهارك بذكر الله</small></span><span class="feature-arrow">←</span></button><button class="feature-card" data-go="evening"><span class="feature-icon moon">☾</span><span><b>ورد المساء</b><small>اختم يومك بالطمأنينة</small></span><span class="feature-arrow">←</span></button><button class="feature-card" data-go="tasbeeh"><span class="feature-icon beads">◉</span><span><b>سبحتك الإلكترونية</b><small>تسبيح مع حفظ تلقائي</small></span><span class="feature-arrow">←</span></button></div>
+        <div class="section-heading"><div><span class="eyebrow muted">عد إلى ما أحببت</span><h2>آخر ما قرأت</h2></div><a href="#recent" class="text-link">عرض الكل ←</a></div><div id="homeRecent" class="recent-strip"></div>
+        <div class="section-heading"><div><span class="eyebrow muted">موعدٌ مع المواسم</span><h2>المناسبات القادمة</h2></div></div><div class="events-card" id="eventsCard"></div>
+      </section>
+      <section id="readerView" class="view" hidden><div class="crumb"><a href="#home">الرئيسية</a><span> / </span><span id="readerCrumb"></span></div><div class="reader-header"><div><span class="eyebrow muted">وردٌ مبارك</span><h1 id="readerTitle"></h1><p id="readerSubtitle"></p></div><span class="reader-symbol" id="readerSymbol"></span></div><div class="progress-wrap" id="progressWrap"><div class="progress-meta"><span>إنجاز الورد</span><b id="progressText">٠٪</b></div><div class="progress-track"><span id="progressBar"></span></div></div><div id="readerCards" class="reader-cards"></div><div class="reader-bottom"><button class="soft-btn" id="prevItem">→ السابق</button><span id="readerPosition"></span><button class="soft-btn" id="nextItem">التالي ←</button></div></section>
+      <section id="listView" class="view" hidden><div class="crumb"><a href="#home">الرئيسية</a><span> / </span><span id="listCrumb"></span></div><div class="section-heading list-heading"><div><span class="eyebrow muted">مكتبتك الإيمانية</span><h1 id="listTitle"></h1><p id="listDescription"></p></div><select id="categoryFilter" aria-label="تصفية حسب القسم"><option value="all">كل الأقسام</option></select></div><div id="categoryGrid" class="category-grid"></div><div id="listResults" class="list-results"></div></section>
+      <section id="tasbeehView" class="view" hidden><div class="crumb"><a href="#home">الرئيسية</a><span> / </span><span>السبحة الإلكترونية</span></div><div class="tasbeeh-page"><span class="eyebrow muted">تسبيحٌ وطمأنينة</span><h1>سبحتك الإلكترونية</h1><p>اختر ذكرك، واضغط مع كل تسبيحة. يُحفظ عدادك تلقائيًا على هذا الجهاز.</p><div class="tasbeeh-panel"><select id="tasbeehPhrase" aria-label="اختر الذكر"><option>سُبْحَانَ اللهِ</option><option>الْحَمْدُ لِلَّهِ</option><option>اللهُ أَكْبَرُ</option><option>لَا إِلَهَ إِلَّا اللهُ</option><option>أَسْتَغْفِرُ اللهَ</option><option>اللَّهُمَّ صَلِّ عَلَى مُحَمَّدٍ</option></select><div class="bead-orbit"><div class="bead-ring"></div><button id="beadButton" class="bead-button" aria-label="سبّح">سَبِّح</button></div><div class="bead-count" id="beadCount">٠</div><div class="tasbeeh-actions"><button class="soft-btn" id="beadReset">إعادة العداد</button><button class="soft-btn" id="beadTarget">الهدف: ٣٣</button></div></div></div></section>
+      <section id="favoritesView" class="view" hidden></section><section id="recentView" class="view" hidden></section>
+      <section id="audioView" class="audio-bar"><div class="audio-caption"><span class="audio-icon">▶</span><span><b>استمع للقرآن الكريم</b><small id="audioStatus">تلاوة قرآنية عبر Quran.com</small></span></div><label class="audio-picker"><span class="sr-only">السورة</span><select id="surahSelect" aria-label="اختر سورة"><option value="1">الفاتحة</option><option value="2">البقرة</option><option value="18">الكهف</option><option value="36">يس</option><option value="55">الرحمن</option><option value="67">الملك</option><option value="112">الإخلاص</option><option value="113">الفلق</option><option value="114">الناس</option></select></label><button id="playQuran" class="play-btn" aria-label="تشغيل سورة القرآن">▶</button><audio id="quranAudio" preload="none"></audio></section>
+      <footer><span>نور الأذكار</span><span>المحتوى موثق بمصادره · راجع التخريج عند كل ذكر</span><a href="https://quran.com" target="_blank" rel="noopener">القرآن الكريم ↗</a></footer>
+    </main>
+  </div>
+  <nav class="mobile-nav" aria-label="تنقل الهاتف"><a href="#home" data-view="home">⌂<small>الرئيسية</small></a><a href="#morning" data-view="morning">☀<small>الصباح</small></a><a href="#categories" data-view="categories">▦<small>المكتبة</small></a><a href="#tasbeeh" data-view="tasbeeh">◉<small>السبحة</small></a><a href="#favorites" data-view="favorites">♡<small>المفضلة</small></a></nav>
+  <div id="toast" class="toast" role="status" aria-live="polite"></div>
+  <script src="app.js" defer></script>
+</body>
+</html>
